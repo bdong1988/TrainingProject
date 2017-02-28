@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>js_12_字符串的方法</title>		
+<script>
+	function doTest(){
+		var s = "abcde12345ab12";
+		console.log("s=" + s);
+		console.log( "s.charAt(3)=" + s.charAt(3));//获取指定索引位置的字符
+		console.log( "indexOf('12')=" +  s.indexOf("12"));//参数字符串在本字符串中的位置，如果没有找到则返回-1；通常用于查找是否包含某个子串；
+		console.log("replace()=" + s.replace("ab", " "));//替换子串
+		console.log("split()=" + s.split("1"));//根据参数分隔转为数组
+		console.log("s.substr(3, 4)=" + s.substr(3, 4));//从索引3号位置开始，截取4个字符
+		console.log("s.substring(3, 4)=" + s.substring(3, 4));//从索引3号位置开始，截取到索引为4的子字符串，包含3位置的值，不包含4位置的值；
+	}
+
+	function doTest2(){
+		
+	}
+</script>
+	</head>
+
+	<body>
+		
+		<input type="button" value="调用函数" onclick="doTest()"/>
+		<input type="button" value="调用函数2" onclick="doTest2()"/>
+	</body>
+</html>

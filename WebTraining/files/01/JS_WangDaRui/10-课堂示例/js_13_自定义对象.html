@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>js_13_自定义对象</title>		
+<script>
+	//1、工厂函数方式
+	function myObject_1(name, age){
+		var o = new Object();//手动创建对象
+		o.name = name;
+		o.age = age;
+		o.sayHello = function(){ console.log("hello, I'm " + name); }
+		return o; //需要返回对象
+	}
+
+	//2、构造函数方式
+	function myObject_2(name, age){
+		this.name = name;
+		this.age = age;
+		this.sayHello = function(){ console.log("hello2, I'm " + name); }
+	}
+
+	function doTest(){
+		var o_1 = myObject_1("tom", 12); //直接调用
+		var o_2 = new myObject_2("jerry", 23);//通过new调用
+
+		//3、直接{}
+		var o_3 = {
+			name:"jack", 
+			"age":18,
+			sayHello:function(){
+				console.log("hello3, I'm " + this.name + ", age=" + this.age);
+			}};
+
+		o_1.sayHello();
+		o_2.sayHello();
+		o_3.sayHello();
+
+	}
+
+	function doTest2(){
+		
+	}
+</script>
+	</head>
+
+	<body>
+		
+		<input type="button" value="调用函数" onclick="doTest()"/>
+		<input type="button" value="调用函数2" onclick="doTest2()"/>
+	</body>
+</html>

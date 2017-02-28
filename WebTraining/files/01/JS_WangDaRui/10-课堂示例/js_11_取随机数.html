@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>js_11_取随机数</title>		
+<script>
+	function doTest(){
+		var count=0;
+		var r;
+
+		while(true){
+			count++;
+			r = Math.floor(Math.random() * 500) +1;
+			console.log("r=" + r);
+			if(r==1 || r==500){
+				break;
+			}
+		}
+
+		console.log("一共执行了" + count + "次");
+	}
+
+	function doTest2(){
+		
+	}
+</script>
+	</head>
+
+	<body>
+		
+		<input type="button" value="调用函数" onclick="doTest()"/>
+		<input type="button" value="调用函数2" onclick="doTest2()"/>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+正则表达式使用：
+
+使用：if(tmpValue.search(req) == -1){return false;}
+或：var pattern = /^\d{6}$/; 
+	  if(! pattern.test(value)){return false;}
+
+
+常用的正则表达式整理：
+验证邮政编码：/^\d{6}$/
+验证固定电话：/^\d{3}-\d{8}$|^\d{4}-\d{7}$/
+验证身份证号码：/^\d{15}$|^\d{18}$|^\d{17}[xX]$/
+验证移动电话：/^1\d{10}$/			
+验证电子邮箱地址：/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
+
+
+
+//长度限制
+function test()
+{
+	if(form1.username.value.length>10)
+	{
+		alert("不能超过10个字符！");
+		form1.username.focus();
+		return false;
+	}
+}
+// 只能是英文. onkeydown调用
+function onlyEng()
+{
+	if( !(event.keyCode>=65&&event.keyCode<=90) )
+　　　　	event.returnValue =false;
+}
+// 只能是数字，没有考虑小键盘。onkeydown调用
+function onlyNum()
+{
+	if( !(event.keyCode>=48&&event.keyCode<=57)){
+	    event.returnValue =false;}
+}
+//验证邮箱格式
+function isEmail()
+{
+	if( form1.strEmail.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)==-1){
+		alert(“Email format error!”);
+		return　false;
+	}
+}
+//两次输入密码是否相同
+function　checkpassword()
+{　
+	if(form1.input1.value!=form1.input2.value)
+　	{
+		alert("false")
+		form1.password.value　="";
+		form1.confirm.value　=　"";
+		return false;
+	}
+}
+//回车变Tab onkeydown="br2tab()"
+function br2tab()
+{
+	if(event.keyCode==13)
+		event.keyCode=9;
+}
+
+

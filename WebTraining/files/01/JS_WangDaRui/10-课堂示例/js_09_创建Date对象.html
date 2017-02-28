@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>js_09_创建Date对象</title>		
+<script>
+	function doTest(){
+		var d_1 = new Date(); //创建表示当前时间的对象
+		var d_2 = new Date(12345678987); //创建指定毫秒数表示的对象
+		var d_3 = new Date(2017, 11, 11);//创建 2017年12月11日的对象
+		var d_4 = new Date(2017, 11, 11, 21, 12, 3);
+
+		console.log("d_1=" + getStr(d_1));
+		console.log("d_2=" + getStr(d_2));
+		console.log("d_3=" + getStr(d_3));
+		console.log("d_4=" + getStr(d_4));
+	}
+
+	function getStr(d){ //返回参数日期对象的字符串表示
+		var y = d.getFullYear();
+		var m = d.getMonth() + 1; //手动加1，表示真实月份
+		var date = d.getDate();
+
+		return y + "年" + m + "月" + date + "日";
+	}
+
+	function doTest2(){
+		
+	}
+</script>
+	</head>
+
+	<body>
+		
+		<input type="button" value="调用函数" onclick="doTest()"/>
+		<input type="button" value="调用函数2" onclick="doTest2()"/>
+	</body>
+</html>

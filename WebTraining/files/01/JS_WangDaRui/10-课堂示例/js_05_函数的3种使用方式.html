@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>js_05_函数的3种使用方式</title>		
+<script>
+	function doTest(a, b){
+		console.log( a + b );
+	}
+	function doTest(a, b){ //这个函数有效
+		console.log( a - b );
+		//演示eval的使用
+		console.log( "eval=" + eval("2+3*4") );
+	}
+
+	//1、直接调用
+	doTest(2, 3);
+</script>
+	</head>
+
+	<body>
+		<!-- 2、超链接调用函数 -->
+		<a href="javascript: doTest(2, 4);">超链接调用函数</a>
+		<br/><br/>
+
+		aaaaaa     bb&nbsp;&nbsp;&nbsp;&nbsp;bb
+		<br/>
+
+		<!-- 3、通过表单对象的事件调用函数 -->
+		<input type="button" value="调用函数" onclick="doTest(2, 5)"/>
+	</body>
+</html>

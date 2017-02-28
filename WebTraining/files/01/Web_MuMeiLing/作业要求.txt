@@ -1,0 +1,13 @@
+      您好，
+       附件中是两张设计图的源文件，希望同学们用此文件做制作两个页面；
+       练习的侧重点：1.ps的基本测量，基本的布局排版（左右结构 浮动 定位的应用）
+                           2.css3中部分常用新属性的练习
+                           3.表单元素的练习
+
+
+If you open the above content shows garbled, see below:
+Hello,
+Attached is the source of two design drawings, hope that students use this document to make two pages;
+The focus of the exercises: 1.ps basic measurement, the basic layout of the row (left and right structure floating positioning application)
+2.css3, some commonly used in the practice of new attributes
+3. Form elements of the practice
