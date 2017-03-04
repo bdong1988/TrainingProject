@@ -24,7 +24,7 @@ function onPageLoad() {
         new festival("劳动节", currentDate.getFullYear(), 4, 1),
         new festival("儿童节", currentDate.getFullYear(), 5, 1),
         new festival("国庆节", currentDate.getFullYear(), 9, 1),
-        new festival("圣诞节", currentDate.getFullYear(), 11, 24)
+        new festival("圣诞节", currentDate.getFullYear(), 11, 25)
     ];
 
     for (var i in festivalList) {
