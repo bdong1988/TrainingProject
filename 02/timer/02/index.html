@@ -8,8 +8,11 @@
     <style>
     #rollingText{
         font-size: 2em;
-        width:400px;
-        margin: 0, auto;
+        width:100%;
+    }
+
+    #rollingButton{
+        font-size: 2em;
     }
     </style>
 </head>
@@ -17,6 +20,7 @@
 <body>
     <div>
         <input type="text" id="rollingText" value="1234567890abcdefghijklmnopqrstuvwxyz">
+        <button id="rollingButton" onclick="onStartRolling()">Rolling</button>
     </div>
     <script src="js/site.js"></script>
 </body>
