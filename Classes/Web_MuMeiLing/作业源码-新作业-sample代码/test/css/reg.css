@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+html{ font-size:62.5%;}
+body {
+	background: #e6ebef;
+	font-family: "Microsoft YaHei";
+	font-size:62.5%;
+}
+div, ul, li, p, a, img, h1, h2, h3, label, span {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+header {
+	font-size: .32rem;
+	height: .9rem;
+	line-height: .9rem;
+	background: #fff;
+	color: #000;
+	border-bottom: .01rem solid #ececec;
+}
+header .icon-back {
+	background: #fff;
+	color: #000;
+	height: .9rem;
+	line-height: .9rem;
+}
+header h1 {
+	color: #000;
+	font-size: .32rem;
+	height: .9rem;
+	line-height: .9rem;
+}
+header a {
+	float: left;
+}
+header a:first-child {
+	padding-left: .4rem;
+}
+header a:last-child {
+	padding-right: .4rem;
+	float: right;
+}
+header div {
+	float: left;
+	margin-left: 2.8rem;
+}
+#content {
+	margin-top: .5rem;
+	position: relative;
+}
+#content form {
+	padding: .35rem;
+}
+#content form input {
+	border-radius: .07rem;
+	border: .01rem solid #ccc;
+	width: 100%;
+	height: .78rem;
+	margin-top: .3rem;
+	font-size: .26rem;
+	line-height: .78rem;
+	padding-left: .26rem;
+}
+#content form button {
+	border-radius: .07rem;
+	border: none;
+	background: #0A86F6;
+	width: 100%;
+	height: .78rem;
+	margin-top: .3rem;
+	font-size: .26rem;
+	line-height: .78rem;
+	color: #fff;
+}
+#content form button a {
+	color: #fff;
+}
+#content form .mima_p {
+	color: #999;
+	font-size: .23rem;
+	padding-left: .2rem;
+}
+#content .yanzheng {
+	font-size: .23rem;
+	position: absolute;
+	width: 1.8rem;
+	height: .54rem;
+	background: #ccc;
+	color: #fff;
+	top: .8rem;
+	right: .7rem;
+	text-align: center;
+	line-height: .54rem;
+	border-radius: .07rem;
+}
+#content .yuedu_p {
+	margin-top: .2rem;
+	font-size: .24rem;
+}
+#content .yuedu_p .butong {
+	display: inline-block;
+	width: .2rem;
+	height: .2rem;
+	background: #fff;
+	border: .02rem solid #ccc;
+	border-radius: 50%;
+	margin-right: .15rem;
+}
+#content .yuedu_p .teshu {
+	display: inline-block;
+	width: .2rem;
+	height: .2rem;
+	background: #fff url(images/small_dui.png) no-repeat 0 .05rem;
+	border: .02rem solid #0A86F8;
+	border-radius: 50%;
+	margin-right: .15rem;
+	background-size: 100%;
+}

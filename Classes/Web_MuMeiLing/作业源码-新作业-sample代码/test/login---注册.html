@@ -1,0 +1,62 @@
+<!doctype html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>注册</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+<link href="iconfont/iconfont.css" rel="stylesheet">
+<link href="css/reg.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+<header>
+    <a href="#" class="link-back"><i class="iconfont icon-back"></i></a>
+    <h1>机票验真</h1>
+</header>
+<div id="content">
+	
+	<form method="post" name="zhuce" action="" target="">
+		<ul>
+        <li>
+            <input class="phone" type="text" placeholder="请输入手机号码" />
+            <button class="btn_check">获取验证码</button>
+        </li>
+		<li><input type="text" placeholder="请输入验证码" /></li>
+		<li>
+        <input type="password" placeholder="请输入密码" />
+        <p class="mima_p">密码不低于8位，必须包括一个大写字母和数字</p>
+        </li>
+		<li><input type="password" placeholder="请确认密码" /></li>
+		<li><button class="btn_reg">注册</button></li>
+		<li class="yuedu_p"><span class="teshu"></span>我已阅读并同意《华夏航空电子商务平台注册协议》</li>
+    </ul>
+    </form>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+
+		
+	$(".yuedu_p span").click(function(){
+		if($(".yuedu_p span").attr("class")=="teshu"){
+			$(".yuedu_p span").attr({"class":"butong"});
+		}else{
+			$(".yuedu_p span").attr({"class":"teshu"});
+		}
+	})
+	$(".phone").focus(function(){
+		$(".phone").keyup(function(){
+			if($(".phone").val()!=""){
+			    $(".yanzheng").css({"background":"#349dfe"});
+		    }else{
+		    	$(".yanzheng").css({"background":"#ccc"});
+		    }
+		})
+		
+	})
+</script>
+</body>
+</html>
+

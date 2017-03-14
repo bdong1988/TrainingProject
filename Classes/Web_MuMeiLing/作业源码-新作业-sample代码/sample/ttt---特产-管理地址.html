@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>华夏航空</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<!-- 引入 Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="iconfont/iconfont.css" rel="stylesheet">
+<link href="css/common-others.css" rel="stylesheet">
+<link href="css/specialty.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+<header class="bg_color_white">
+	<div class="container">
+        <h1>管理收货地址</h1>
+        <a href="#" class="link-back"><i class="iconfont icon-back"></i></a>
+    </div>
+</header>
+
+<div class="pt-box address-box">
+	<form>
+    <div class="address-list">
+        <div class="address-til">
+        	<div class="container">
+                <p>
+                <span class="pull-left">悠悠</span>
+                <span class="pull-right">18519700256</span>
+                </p>
+                <p>北京北京市大兴区清源路清源西里 21 号楼 5 单元 402</p>
+            </div>
+        </div>
+        <div class="address-fun">
+        	<div class="container">
+                <div class="form-group">
+                    <label class="radio-inline pull-left">
+                        <span class="radio_box"><input type="radio"></span> <font>默认地址</font>
+                    </label>
+                    <span class="pull-right">
+                        <button class="btn btn-link" role="button"><i class="iconfont icon-bianji"></i> 编辑</button> 
+                        <button class="btn btn-link" role="button"><i class="iconfont icon-delete"></i> 删除</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="address-list">
+        <div class="address-til">
+        	<div class="container">
+                <p>
+                <span class="pull-left">悠悠</span>
+                <span class="pull-right">18519700256</span>
+                </p>
+                <p>北京北京市大兴区清源路清源西里 21 号楼 5 单元 402</p>
+            </div>
+        </div>
+        <div class="address-fun">
+        	<div class="container">
+                <div class="form-group">
+                    <label class="radio-inline pull-left">
+                        <span class="radio_box btn_span"><input type="radio"></span>设为默认
+                    </label>
+                    <span class="pull-right">
+                        <button class="btn btn-link" role="button"><i class="iconfont icon-bianji"></i> 编辑</button> 
+                        <button class="btn btn-link" role="button"><i class="iconfont icon-delete"></i> 删除</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="address-list">
+        <div class="address-til">
+        	<div class="container">
+                <p>
+                <span class="pull-left">悠悠</span>
+                <span class="pull-right">18519700256</span>
+                </p>
+                <p>北京北京市大兴区清源路清源西里 21 号楼 5 单元 402</p>
+            </div>
+        </div>
+        <div class="address-fun">
+        	<div class="container">
+                <div class="form-group">
+                    <label class="radio-inline pull-left">
+                        <span class="radio_box"><input type="radio"></span> <font>设为默认</font>
+                    </label>
+                    <span class="pull-right">
+                        <button class="btn btn-link" role="button"><i class="iconfont icon-bianji"></i> 编辑</button> 
+                        <button class="btn btn-link" role="button"><i class="iconfont icon-delete"></i> 删除</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <button class="btn btn-primary btn-lg btn-block">添加新地址</button>
+</div>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script>
+
+	$(".address-fun div div label span").click(function(){
+		if($(this).hasClass("btn_span")){
+			$(this).removeClass("btn_span");
+			$(".address-fun div div label font").css({"color":"#000"})
+		}else{
+			$(".address-fun div div label span").removeClass("btn_span");
+			$(".address-fun div div label font").css({"color":"#000"});
+			$(this).addClass("btn_span");
+			$(this).next().css({"color":"#0a86f8"})
+		}
+	})
+</script>
+</body>
+</html>
