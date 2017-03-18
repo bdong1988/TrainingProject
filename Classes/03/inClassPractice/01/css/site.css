@@ -1,0 +1,22 @@
+#hide_bg{
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  background-color: green;
+  opacity: 0.6;
+  z-index: 9998;
+}
+
+#hide_div{
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  display: none;
+  background-color:blue;
+  z-index: 9999;
+}

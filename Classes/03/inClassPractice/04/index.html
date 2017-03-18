@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>class 3 practice 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+  <form action="https://www.baidu.com" onsubmit="return validateData()">
+    User Name:<input type="text" id="userName" onblur="checkUserName()"><span id="userNameSpan"></span><br>
+    Pass Word:<input type="text" id="passWord" onblur="checkPassWord()"><span id="passWordSpan"></span><br>
+    Zip  Code:<input type="text" id="postCode" onblur="checkPostCode()"><span id="postCodeSpan"></span><br>
+    <button type="submit">Sign Up</button>
+  </form>
+  <script src="js/site.js"></script>
+</body>
+
+</html>
