@@ -140,7 +140,7 @@ function checkEmail() {
     return true;
   }
 
-  var pattern = /^\w+@\w+\.\S+$/;
+  var pattern = /^\w+@\w+\..+$/;
   if (!pattern.test(email)) {
     emailSpan.innerHTML ='<font color="red">邮箱格式不符</font>';
     return false;

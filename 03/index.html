@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  <h6 id="tittle">用户注册信息 *为必填项</h6>
+  <h6 id="tittle">用户注册信息 <span class="redStar">*</span>为必填项</h6>
   <div class="container">
     <form action="https://www.baidu.com" id="registerForm" onsubmit="return validateData()">
       <table id="tab" border="2">
         <tr>
           <td>
-            <label>*用  户  名:</label>
+            <label><span class="redStar">*</span>用  户  名:</label>
           </td>
           <td>
             <input type="text" id="userName" onblur="checkUserName()"><span id="userNameSpan"></span>
@@ -24,7 +24,7 @@
         </tr>
         <tr>
           <td>
-            <label>*密      码:</label>
+            <label><span class="redStar">*</span>密      码:</label>
           </td>
           <td>
             <input type="password" id="passWord" onblur="checkPassWord()"><span id="passWordSpan"></span>
@@ -32,7 +32,7 @@
         </tr>
         <tr>
           <td>
-            <label>*确认密码:</label>
+            <label><span class="redStar">*</span>确认密码:</label>
           </td>
           <td>
             <input type="password" id="confirmPassWord" onblur="checkConfirmPassWord()"><span id="confirmPassWordSpan"></span>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
           <td>
-            <label>*真实姓名:</label>
+            <label><span class="redStar">*</span>真实姓名:</label>
           </td>
           <td>
             <input type="text" id="realName" onblur="checkRealName()"><span id="realNameSpan"></span>
@@ -56,7 +56,7 @@
         </tr>
         <tr>
           <td>
-            <label>*身份证号码:</label>
+            <label><span class="redStar">*</span>身份证号码:</label>
           </td>
           <td>
             <input type="text" id="id" onblur="checkID()"><span id="idSpan"></span>
