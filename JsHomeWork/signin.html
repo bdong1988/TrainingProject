@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Sign In</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+  <form action="index.html" onsubmit="return validateData()">
+    <label>User Name:</label> <input type="text" id="userName" onblur="checkUserName()"><span id="userNameSpan"></span><br>
+    <label>Pass Word:</label><input type="text" id="passWord" onblur="checkPassWord()"><span id="passWordSpan"></span><br>
+    <button type="submit">Sign In</button>
+  </form>
+  <button onclick="onSignUp()">Sign Up</button>
+  <script src="js/signin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>class 3 practice 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+  <h6 id="tittle">用户注册信息 <span class="redStar">*</span>为必填项</h6>
+  <div class="container">
+    <form action="index.html" id="registerForm" onsubmit="return validateData()">
+      <table id="tab" border="2">
+        <tr>
+          <td>
+            <label><span class="redStar">*</span>用  户  名:</label>
+          </td>
+          <td>
+            <input type="text" id="userName" onblur="checkUserName()"><span id="userNameSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label><span class="redStar">*</span>密      码:</label>
+          </td>
+          <td>
+            <input type="password" id="passWord" onblur="checkPassWord()"><span id="passWordSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label><span class="redStar">*</span>确认密码:</label>
+          </td>
+          <td>
+            <input type="password" id="confirmPassWord" onblur="checkConfirmPassWord()"><span id="confirmPassWordSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label><span class="redStar">*</span>真实姓名:</label>
+          </td>
+          <td>
+            <input type="text" id="realName" onblur="checkRealName()"><span id="realNameSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>出生日期:</label>
+          </td>
+          <td>
+            <input type="text" id="birthDate" onblur="checkbirthDate()"><span id="birthDateSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label><span class="redStar">*</span>身份证号码:</label>
+          </td>
+          <td>
+            <input type="text" id="id" onblur="checkID()"><span id="idSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>地      址:</label>
+          </td>
+          <td>
+            <input type="text" id="address"><span id="addressSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>邮      编:</label>
+          </td>
+          <td>
+            <input type="text" id="postCode" onblur="checkPostCode()"><span id="postCodeSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>电子邮箱:</label>
+          </td>
+          <td>
+            <input type="text" id="email" onblur="checkEmail()"><span id="emailSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>省:</label>
+          </td>
+          <td>
+            <input type="text" id="province" ><span id="proviceSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>城市:</label>
+          </td>
+          <td>
+            <input type="text" id="city"><span id="citySpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>性别:</label>
+          </td>
+          <td>
+            <input type="text" id="gender"><span id="genderSpan"></span>
+          </td>
+        </tr>
+      </table>
+      <button type="submit">确认</button>
+      <button type="reset">重置</button>
+
+    </form>
+  </div>
+  <script src="js/signup.js"></script>
+</body>
+
+</html>

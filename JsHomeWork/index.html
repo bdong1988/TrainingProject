@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>index</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body onload="onPageLoad()">
+  <span>Current Time</span><input type="text" id="currentTime" width="200px">
+  <div>
+    <h6>Province: </h6> <select id="province" onchange="provinceChange(this)">
+      <option value="0">None</option>
+      <option value="1">Hei</option>
+      <option value="2">Ji</option>
+      <option value="3">Liao</option>
+    </select>
+    <h6>City: </h6><select id="city">
+      <option value="0">None</option>
+    </select>
+  </div>
+   <button onclick="createTable()">Add Table</button>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
