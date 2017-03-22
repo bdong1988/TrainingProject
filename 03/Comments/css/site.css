@@ -1,0 +1,22 @@
+
+.tittle {
+    text-align: center;
+}
+
+#tab{
+  margin: 0px auto;
+  width: 80%;
+}
+
+.cotainer{
+  text-align: center;
+  margin: 0px auto;
+}
+
+#newComments{
+  width: 80%;
+}
+
+#submitBtn{
+  margin: 0px auto;
+}
