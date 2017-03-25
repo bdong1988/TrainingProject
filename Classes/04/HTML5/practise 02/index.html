@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>html5</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+  <div>
+    <form method="POST" autocomplete="on">
+      <fieldset id="account">
+        <legend>Account information</legend>
+        <label for="username">User name</label>
+        <input id="username" type="text" class="textbox" name="username" required placeholder="Please input user name"><br>
+        <label for="password">Passworld</label>
+        <input id="password" type="password" class="textbox" name="password" required placeholder="Please input password"><br>
+        <label for="passwordConfim">Confirm Passworld</label>
+        <input id="passwordConfim" type="password" class="textbox" name="passwordConfim" required placeholder="Please input user name"><br>
+        <label for="email">Email</label>
+        <input id="email" type="email" class="textbox" name="email" required placeholder="Please input email"><br>
+      </fieldset>
+      <fieldset id="personal">
+        <legend>Other information</legend>
+        <label for="personalUrl">Home page</label>
+        <input id="personalUrl" type="url" class="textbox" name="personalUrl" required placeholder="Please input your homepage"><br>
+        <label for="age">Age</label>
+        <input id="age" type="number" class="textbox" name="age" required placeholder="Please input your age"><br>
+      </fieldset>
+      <fieldset>
+        <input type="range" id="range" min="0" max="100" step="5" onchange="onRangeChange()">
+        <output id="output"></output>
+      </fieldset>
+      <fieldset id="photo">
+        <input type="file" id="images" accept="image/*">
+        <img id="img"><br>
+        <input type="button" value="display" onclick="showDetail()">
+      </fieldset>
+      <fieldset id="confirm">
+        <legend>Confirm</legend>
+        <button type="submit">Submi</button>
+        <button type="reset">Reset</button>
+      </fieldset> 
+    </form>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+
+</html>

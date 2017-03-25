@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>html5</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+  <div>
+    <form method="POST" autocomplete="on">
+      <fieldset id="account">
+        <legend>Book Information</legend>
+        <label for="bookname">Book name:</label>
+        <input id="bookname" type="text" class="textbox" name="bookname" required placeholder="Please input book name"><br>
+        <label for="bookisbn">Book ISBN:</label>
+        <input id="bookisbn" type="text" class="textbox" name="bookisbn" required placeholder="Please input book isbn" pattern="^\w{4}-\w-\w{3}-\w{5}$"><br>
+        <label for="bookcount">Book Count:</label>
+        <input id="bookcount" type="number" min="1" max="150" class="textbox" name="bookcount" required placeholder="Please input book count"><br>
+      </fieldset>
+      <fieldset id="addressinfo">
+        <legend>Address information</legend>
+        <label for="receiverName">Receiver name:</label>
+        <input id="receiverName" type="text" class="textbox" name="receiverName" required placeholder="Please input receiver name"><br>
+        <label for="receiveDate">Receive date:</label>
+        <input id="receiveDate" type="date" class="textbox" name="receiveDate" required placeholder="Please input receive date"><br>
+        <label for="address">Address:</label>
+        <input id="address" type="text" class="textbox" name="address" required placeholder="Please input address"><br>
+        <label for="postCode">Post code:</label>
+        <input id="postCode" type="text" class="textbox" name="postCode" required placeholder="Please input postCode" pattern="^\d{6}$"><br>
+        <label for="telephone">telephone:</label>
+        <input id="telephone" type="text" class="textbox" name="telephone" required placeholder="Please input telephone" pattern="^\d{11}$"><br>
+        <label for="email">email:</label>
+        <input id="email" type="email" class="textbox" name="email" required placeholder="Please input email"><br>
+      </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+
+</html>
