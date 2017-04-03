@@ -1,12 +1,24 @@
-input[type="search"]{
-  color: red;
+input[type="search"] {
+    color: red;
 }
 
-input{
-  width: 200px;
+input {
+    width: 200px;
 }
 
-.textbox{
-  width: 200px;
+.textbox {
+    width: 200px;
 }
 
+.userInfo {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+#confirm {
+    display: inline-block;
+    width: 90%;
+}

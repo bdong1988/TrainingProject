@@ -11,27 +11,27 @@
 <body>
   <div>
     <form method="POST" autocomplete="on">
-      <fieldset id="account">
+      <fieldset id="account" class="userInfo">
         <legend>Account information</legend>
-        <label for="username">User name</label>
+        <label for="username">User name</label><br>
         <input id="username" type="text" class="textbox" name="username" required placeholder="Please input user name"><br>
-        <label for="password">Passworld</label>
+        <label for="password">Passworld</label><br>
         <input id="password" type="password" class="textbox" name="password" required placeholder="Please input password"><br>
-        <label for="passwordConfim">Confirm Passworld</label>
+        <label for="passwordConfim">Confirm Passworld</label><br>
         <input id="passwordConfim" type="password" class="textbox" name="passwordConfim" required placeholder="Please input user name"><br>
-        <label for="email">Email</label>
+        <label for="email">Email</label><br>
         <input id="email" type="email" class="textbox" name="email" required placeholder="Please input email"><br>
       </fieldset>
-      <fieldset id="personal">
+      <fieldset id="personal" class="userInfo">
         <legend>Other information</legend>
         <label for="personalUrl">Home page</label>
         <input id="personalUrl" type="url" class="textbox" name="personalUrl" required placeholder="Please input your homepage"><br>
         <label for="age">Age</label>
         <input id="age" type="number" class="textbox" name="age" required placeholder="Please input your age"><br>
       </fieldset>
-      <fieldset id="confirm">
+      <fieldset id="confirm" class="confirm">
         <legend>Confirm</legend>
-        <button type="submit">Submi</button>
+        <button type="submit">submit</button>
         <button type="reset">Reset</button>
       </fieldset> 
     </form>
