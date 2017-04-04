@@ -11,29 +11,29 @@
 <body>
   <div>
     <form method="POST" autocomplete="on">
-      <fieldset id="account" class="userInfo">
+      <fieldset id="account" class="userInfo radius">
         <legend>Account information</legend>
         <label for="username">User name</label><br>
-        <input id="username" type="text" class="textbox" name="username" required placeholder="Please input user name"><br>
+        <input id="username" type="text" class="textbox radius" name="username" required placeholder="Please input user name"><br>
         <label for="password">Passworld</label><br>
-        <input id="password" type="password" class="textbox" name="password" required placeholder="Please input password"><br>
+        <input id="password" type="password" class="textbox radius" name="password" required placeholder="Please input password"><br>
         <label for="passwordConfim">Confirm Passworld</label><br>
-        <input id="passwordConfim" type="password" class="textbox" name="passwordConfim" required placeholder="Please input user name"><br>
+        <input id="passwordConfim" type="password" class="textbox radius" name="passwordConfim" required placeholder="Please input user name"><br>
         <label for="email">Email</label><br>
-        <input id="email" type="email" class="textbox" name="email" required placeholder="Please input email"><br>
+        <input id="email" type="email" class="textbox radius" name="email" required placeholder="Please input email"><br>
       </fieldset>
-      <fieldset id="personal" class="userInfo">
+      <fieldset id="personal" class="userInfo radius">
         <legend>Other information</legend>
-        <label for="personalUrl">Home page</label>
-        <input id="personalUrl" type="url" class="textbox" name="personalUrl" required placeholder="Please input your homepage"><br>
-        <label for="age">Age</label>
-        <input id="age" type="number" class="textbox" name="age" required placeholder="Please input your age"><br>
+        <label for="personalUrl">Home page</label><br>
+        <input id="personalUrl" type="url" class="textbox radius" name="personalUrl" required placeholder="Please input your homepage"><br>
+        <label for="age">Age</label><br>
+        <input id="age" type="number" min="1" class="textbox radius" name="age" required placeholder="Please input your age"><br>
+        <label for="salary">Salary</label><br>
+        <input id="salary" type="range" class="textbox radius" name="salary" min="1" max="10000"><br>
+        <label for="description">Description</label><br>
+        <textarea rows="5" cols="1" id="description" class="textbox radius" name="description" required placeholder="Here is detail description"></textarea><br>
       </fieldset>
-      <fieldset id="confirm" class="confirm">
-        <legend>Confirm</legend>
-        <button type="submit">submit</button>
-        <button type="reset">Reset</button>
-      </fieldset> 
+        <button type="submit" class="submit">submit</button>
     </form>
   </div>
   <script src="js/site.js"></script>
