@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>动画图片切换</title>
+<script type="text/javascript" src="jslib/jquery-1.4.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		 var index = 0;
+		 var timer;
+		 $(".imgID li").mouseover(function(){
+			index  =   $(".imgID li").index(this);
+			animateImg(index);
+		 }).eq(0).mouseover();	
+		 $('.main').hover(function(){
+				 clearInterval(timer);
+			 },function(){
+				 timer = setInterval(function(){
+					animateImg(index)
+					index++;
+					if(index==$(".imgID > li").length){index=0;}
+				  } , 2000);
+		 }).trigger("mouseleave");
+	})
+	function animateImg(index){
+			var divh = $(".content .main").height();
+			$(".imgarea").stop(true,false).animate({top : -divh*index+"px"},1000);
+			$(".imgID li").removeClass("active")
+				.eq(index).addClass("active");
+	}
+</script>
+<style type="text/css">
+	.content{float:left;}
+	.content .main { 
+		margin-bottom:10px;
+		width:335px; 
+		height:264px; 
+		overflow:hidden;
+		position:relative;
+	}
+	.content .imgarea,.content .imgID{
+		position:absolute;
+	}
+	.content .imgarea li{ 
+		list-style:none;
+		display:inline;
+	}
+	.content .imgarea img{ 
+		width:335px; 
+		height:251px;
+		display:block;
+		border:0px;
+	}
+	.content .imgID{ 
+		right:5px; 
+		bottom:5px;
+	}
+	.content .imgID li{
+		float: left;
+		color: #069;
+		text-align: center;
+		line-height: 16px;
+		width: 16px;
+		height: 16px;
+		font-family: Arial;
+		font-size: 12px;
+		cursor: pointer;
+		overflow: hidden;
+		margin: 3px 1px;
+		border: 1px solid #069;
+		background-color: #fff;
+	}
+	.content .imgID li.active{
+		color: #fff;
+		line-height: 16px;
+		width: 16px;
+		height: 16px;
+		font-size: 14px;
+		margin: 3px 1px;
+		border: 1px solid #069;
+		background-color: #069;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+<div class="content">
+  <div class="main" >
+    <ul class="imgarea" >
+      <li><a href="#"><img src="img/bj_0.jpg" /></a></li>
+      <li><a href="#"><img src="img/bj_1.jpg"/></a></li>
+      <li><a href="#"><img src="img/bj_2.jpg"/></a></li>
+      <li><a href="#"><img src="img/bj_3.jpg"/></a></li>
+    </ul>
+    <ul class="imgID" >
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+	  <li>4</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

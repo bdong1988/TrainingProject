@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>表格排序</title>
+
+<script src="jslib/jquery-1.6.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<table cellpadding="0" cellspacing="0" border="0">
+     <thead>
+            <tr>
+                <th>&nbsp;编号&nbsp;</th><th>&nbsp;语言&nbsp;</th><th>&nbsp;课时&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>c001</td><td>C#</td><td>80</td>
+            </tr>
+            <tr>
+                <td>c002</td><td>Java</td><td>70</td>
+            </tr>
+            <tr>
+                <td>c003</td><td>PHP</td><td>60</td>
+            </tr>
+            <tr>
+                <td>c004</td><td>Perl</td><td>50</td>
+            </tr>
+        </tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var $table = $('table');
+		var currentPage = 0;  //当前页
+		var pageSize = 2;  //每页行数（不包括表头）
+		//绑定分页事件
+		$table.bind('paging', function()
+		{
+			$table.find('tbody tr').hide()
+				.slice(currentPage * pageSize, (currentPage + 1) * pageSize).show();
+		});
+		var sumRows = $table.find('tbody tr').length;  //记录总行数
+		var sumPages = Math.ceil(sumRows/pageSize);    //总页数    
+		var $pager = $('<div class="page"></div>');  //分页div
+		for( var pageindex = 0; pageindex < sumPages; pageindex++ )
+		{
+			//为分页标签加上链接
+			$('<a href="#" ><span>'+ (pageindex+1) +'</span></a>')
+				.bind("click", { "newPage": pageindex }, function(event) 
+				{           
+					currentPage = event.data["newPage"];                  
+					$table.trigger("paging");             
+				})
+			   .appendTo($pager);          
+			$pager.append("  ");
+		}
+		$pager.insertAfter($table);    //分页div插入table
+		
+		$table.trigger("paging");  //初始化   
+		  
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>可编辑表格</title>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){    
+    $("tbody td").click(function(){
+        var altertd = $(this);
+        if(altertd.children("input").length>0){
+            return false;    
+        }
+        var htmlcontent = altertd.html();
+        altertd.html("");
+        var textbox = $("<input type='text' />").css("border-width","1").css("background-color","gray").width(altertd.width()).val(htmlcontent).appendTo(altertd);
+        textbox.trigger("focus").trigger("select");
+        textbox.click(function(){
+            return false;                        
+        });        
+        textbox.keyup(function(event){
+            var keycode = event.which;
+            if(keycode == 13){
+                var inputtext = $(this).val();
+                altertd.html(inputtext);
+            }
+            if(keycode == 27){
+                altertd.html(htmlcontent);
+            }
+        });
+     });
+ });
+</script>
+</head>
+<body>
+	<table border="1">
+   <thead>
+      <tr>
+         <th>
+            No
+         </th>
+         <th>
+            Language
+         </th>
+         <th>
+            Price
+         </th></tr>
+  </thead>    
+      <tbody>
+      <tr>
+         <td>
+            001
+         </td>
+         <td>
+            C#
+         </td>
+         <td>
+            1000
+         </td>
+      </tr>
+      <tr>
+         <td>
+            002
+         </td>
+         <td>
+            Java
+         </td>
+         <td>
+            1000
+         </td>
+      </tr>
+      <tr>
+         <td>
+            003
+         </td>
+         <td>
+            C
+         </td>
+         <td>
+            900
+         </td>
+      </tr>
+      <tr>
+         <td>
+            004
+         </td>
+         <td>
+            C++
+         </td>
+         <td>
+            1000
+         </td>
+      </tr>
+      <tr>
+         <td>
+            005
+         </td>
+         <td>
+            PHP
+         </td>
+         <td>
+            1000
+         </td>
+      </tr>
+      <tr>
+         <td>
+            006
+         </td>
+         <td>
+            Perl
+         </td>
+         <td>
+            900
+         </td>
+      </tr>
+      <tr>
+         <td>
+            007
+         </td>
+         <td>
+            PASCAL
+         </td>
+         <td>
+            800
+         </td>
+      </tr>
+      <tr>
+         <td>
+            008
+         </td>
+         <td>
+            Basic
+         </td>
+         <td>
+            500
+         </td>
+      </tr>
+      </tbody>
+   </table>
+</body>
+</html>

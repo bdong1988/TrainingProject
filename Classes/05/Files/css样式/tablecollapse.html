@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+<title>表格展开与折叠</title>
+
+<script src="jslib/jquery-1.6.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+	$('.titletr').toggle(function(){
+ 		$('#desc'+this.id).css("display","block");
+		},function(){
+		 $('#desc'+this.id).css("display","none");
+	});
+
+	});
+  </script>
+
+  <style type="text/css">
+  .titletr{
+	cursor:hand;
+  }
+
+  </style>
+
+</head>
+
+<body>
+
+<h3>表格行的展开与折叠</h3>
+
+<table border="1">
+
+<tr class="titletr" id="one"><td>jQuery</td></tr>
+
+<tr id="descone" style="display:none"><td>
+
+ jQuery 是一个JavaScript 库，它有助于简化JavaScript? 以及Asynchronous JavaScript + XML (Ajax) 编程。
+
+</td>
+
+</tr>
+
+<tr class="titletr" id="two"><td>Javascript</td></tr>
+
+<tr id="desctwo" style="display:none"><td>
+
+JavaScript是一种基于对象和事件驱动的客户端脚本语言。 JavaScript最初的设计是为了检验HTML表单输入的正确性。 
+</td>
+
+</tr>
+
+</table> 
+
+</body>
+
+</html>
+

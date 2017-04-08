@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+无标题页
+</title>
+    <script language="Javascript" src="jslib/jquery-1.6.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	function RemoveRow()
+	{
+		$("tr:last").remove();
+	}
+	function RemoveCol()
+	{
+		$("tr td:last-child").remove();
+	}
+	function AddRow()
+	{
+		$("tr:first").clone().appendTo("table:first");
+	}
+	function AddCol()
+	{
+		$("tr").append("<td>JQuery</td>");
+	}
+	</script>
+</head>
+<body>
+
+<input type="button" name="button" id="button" value="加列" onclick="AddCol();" />
+<input type="button" name="button" id="button" value="加行" onclick="AddRow();" />
+<input type="button" name="button" id="button" value="减列" onclick="RemoveCol();" />
+<input type="button" name="button" id="button" value="减行" onclick="RemoveRow();" />
+
+<table border="1">
+<tr>
+    <td>JQuery</td>
+    <td>JQuery</td>
+</tr>
+<tr>
+    <td>JQuery</td>
+    <td>JQuery</td>
+</tr>
+</table>
+</body>
+</html>

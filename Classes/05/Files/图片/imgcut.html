@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片剪切</title><br />
+<style type="text/css">
+ li a img{position:relative; vertical-align:text-top;}
+.part1 li{width:200px; height:200px;float:left; margin-right:10px; padding:5px; background:#fff; overflow:hidden;}
+.part1 li a{width:200px; height:200px;float:left; overflow:hidden; text-align:center; position:relative;}
+.part2 li{width:100px; height:100px;float:left; margin-right:10px; padding:5px; background:#fff; overflow:hidden;}
+.part2 li a{width:100px; height:100px;float:left; overflow:hidden; text-align:center; position:relative;}
+.part3 li{width:120px; height:90px;float:left; margin-right:10px; padding:5px; background:#fff; overflow:hidden;}
+.part3 li a{width:120px; height:90px;float:left; overflow:hidden; text-align:center; position:relative;}
+</style>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".cutimg").each(function(){
+			if($(this).height()>$(this).parent().height() && $(this).width()>$(this).parent().width())
+			{
+				$(this).css("top",$(this).height()*($(this).parent().height()/$(this).height())+"px");
+				$(this.css("left",$(this).width()*($(this).parent().width()/$(this).width())+"px");
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+
+<div class="part1" style="margin-top:20px;">
+	<ul>
+		<li><a href="#"><img src="img/img1.jpg" width="300" height="372" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img3.jpg" width="497" height="306" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img5.jpg" width="452" height="531" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img6.jpg" width="428" height="319" class="cutimg"></a></li>
+	</ul>
+</div>
+<div class="part2" style="margin-top:20px;">
+	<ul>
+		<li><a href="#"><img src="img/img1.jpg" width="300" height="372" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img3.jpg" width="497" height="306" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img5.jpg" width="452" height="531" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img6.jpg" width="428" height="319" class="cutimg"></a></li>
+	</ul>
+</div>
+<div class="part3" style="margin-top:20px;">
+	<ul>
+		<li><a href="#"><img src="img/img1.jpg" width="300" height="372" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img3.jpg" width="497" height="306" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img5.jpg" width="452" height="531" class="cutimg"></a></li>
+		<li><a href="#"><img src="img/img6.jpg" width="428" height="319" class="cutimg"></a></li>
+	</ul>
+</div>
+</body>
+</html>

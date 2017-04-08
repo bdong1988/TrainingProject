@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>表格分页插件</title>
+<style type="text/css">
+td { 
+            border: 1px solid black; 
+          }
+          
+          table { 
+            border: thick solid black; width: 100%; 
+          }
+          
+          #testTable { 
+            width : 350px;
+            margin-left: auto; 
+            margin-right: auto; 
+          }
+          
+          #tablePagination { 
+            background-color: #DCDCDC; 
+            font-size: 0.8em; 
+            padding: 0px 5px; 
+            height: 20px
+          }
+          
+          #tablePagination_paginater { 
+            margin-left: auto; 
+            margin-right: auto;
+          }
+          
+          #tablePagination img { 
+            padding: 0px 2px; 
+          }
+          
+          #tablePagination_perPage { 
+            float: left; 
+          }
+          
+          #tablePagination_paginater { 
+            float: right; 
+          }
+</style>
+<script type="text/javascript" src="../../jslib/jquery-1.6.js"></script>
+<script type="text/javascript" src="js/jquery.tablePagination.0.4.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('tbody tr:odd', $('#menuTable')).hide(); //hiding rows for test
+            var options = {
+              currPage : 2, 
+              ignoreRows : $('tbody tr:odd', $('#menuTable')),
+              optionsForRows : [2,3,5],
+              rowsPerPage : 5,
+              firstArrow : (new Image()).src="./img/firstBlue.gif",
+              prevArrow : (new Image()).src="./img/prevBlue.gif",
+              lastArrow : (new Image()).src="./img/lastBlue.gif",
+              nextArrow : (new Image()).src="./img/nextBlue.gif"
+            }
+            $('#menuTable').tablePagination(options);
+
+	});
+</script>
+</head>
+<body>
+	<table id="menuTable">
+            <thead>
+              <tr>
+                <td>Item</td><td>Cost</td><td>Description</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No. 1</td><td>$1.50</td><td>Fake Description</td>
+              </tr>
+              <tr>
+                <td>No. 2</td><td>$2.50</td><td>Made up word</td>
+              </tr>
+              <tr>
+                <td>No. 3</td><td>$6.63</td><td>Something is a Something</td>
+              </tr>
+              <tr>
+                <td>No. 4</td><td>$1.20</td><td>Blah Blah </td>
+              </tr>
+              <tr>
+                <td>No. 5</td><td>$1.11</td><td>Great one dude</td>
+              </tr>
+              <tr>
+                <td>No. 6</td><td>$6.42</td><td>Have no idea what to type</td>
+              </tr>
+              <tr>
+                <td>No. 7</td><td>$2.52</td><td>Sometimes you feel like a nut</td>
+              </tr>
+              <tr>
+                <td>No. 8</td><td>$4.51</td><td>Snickers</td>
+              </tr>
+              <tr>
+                <td>No. 9</td><td>$1.21</td><td>That's mmm mmm good</td>
+              </tr>
+              <tr>
+                <td>No. 10</td><td>$0.99</td><td>Pizza</td>
+              </tr>
+              <tr>
+                <td>No. 11</td><td>$3.99</td><td>Root Beer Floats</td>
+              </tr>
+              <tr>
+                <td>No. 12</td><td>$5.99</td><td>Large bag of Gumdrops</td>
+              </tr>
+            </tbody>
+          </table>
+</body>
+</html>

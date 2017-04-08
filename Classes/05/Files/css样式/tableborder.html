@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表格边框控制</title>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+<script type="text/ecmascript">
+	$(document).ready(function() {     
+		$("table").mouseover(function(){        
+			$(this).css("border", "dotted black 3px");      });     
+		$("table").mouseout(function(){          
+			$(this).css("border", "inset red 5px");     }); 
+	}); 
+</script>
+
+</head>
+<body>
+	<table>
+    	<tr>
+        	<td>
+            	jQuery对表格边框控制
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

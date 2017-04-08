@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jslib/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){    
+    $("tbody td").click(function(){
+        var altertd = $(this);
+        if(altertd.children("input").length>0){
+            return false;    
+        }
+        var htmlcontent = altertd.html();
+        altertd.html("");
+        var textbox = $("<input type='text' />").css("border-width","1").css("background-color","gray").width(altertd.width()).val(htmlcontent).appendTo(altertd);
+        textbox.trigger("focus").trigger("select");
+        textbox.click(function(){
+            return false;                        
+        });        
+        textbox.keyup(function(event){
+            var keycode = event.which;
+            if(keycode == 13){
+                var inputtext = $(this).val();
+                altertd.html(inputtext);
+            }
+            if(keycode == 27){
+                altertd.html(htmlcontent);
+            }
+        });
+     });
+	 var $table = $('table');
+		var currentPage = 0;  //当前页
+		var pageSize = 2;  //每页行数（不包括表头）
+		//绑定分页事件
+		$table.bind('paging', function()
+		{
+			$table.find('tbody tr').hide()
+				.slice(currentPage * pageSize, (currentPage + 1) * pageSize).show();
+		});
+		var sumRows = $table.find('tbody tr').length;  //记录总行数
+		var sumPages = Math.ceil(sumRows/pageSize);    //总页数    
+		var $pager = $('<div class="page"></div>');  //分页div
+		for( var pageindex = 0; pageindex < sumPages; pageindex++ )
+		{
+			//为分页标签加上链接
+			$('<a href="#" ><span>'+ (pageindex+1) +'</span></a>')
+				.bind("click", { "newPage": pageindex }, function(event) 
+				{           
+					currentPage = event.data["newPage"];                  
+					$table.trigger("paging");             
+				})
+			   .appendTo($pager);          
+			$pager.append("  ");
+		}
+		$pager.insertAfter($table);    //分页div插入table
+		
+		$table.trigger("paging");  //初始化
+		
+		var sort_direction=1;    
+            $('th').each(function(i){  
+                    $(this).click(function(){
+                            if(sort_direction==1)
+                            {
+                                sort_direction = -1;
+                            }
+                            else
+                            {
+                               sort_direction = 1;
+                            }
+                            var trarr = $('table').find('tbody > tr').get();
+                            trarr.sort(function(a, b){
+                                    var col1 = $(a).children('td').eq(i).text().toUpperCase();
+                                    var col2 = $(b).children('td').eq(i).text().toUpperCase();
+                                    return (col1 < col2) ? -sort_direction : (col1 > col2) ? sort_direction : 0;
+                            });
+                            $.each(trarr,function(i, row){
+                                    $('tbody').append(row);
+                            });
+                            
+                     });
+            });
+ });
+</script>
+</head>
+<body>
+	<table cellpadding="0" cellspacing="0" border="0">
+     <thead>
+            <tr>
+                <th>&nbsp;编号&nbsp;</th><th>&nbsp;语言&nbsp;</th><th>&nbsp;课时&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>c001</td><td>C#</td><td>80</td>
+            </tr>
+            <tr>
+                <td>c002</td><td>Java</td><td>70</td>
+            </tr>
+            <tr>
+                <td>c003</td><td>PHP</td><td>60</td>
+            </tr>
+            <tr>
+                <td>c004</td><td>Perl</td><td>50</td>
+            </tr>
+        </tbody>
+	</table>
+</body>
+</html>

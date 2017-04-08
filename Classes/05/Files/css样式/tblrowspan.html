@@ -1,0 +1,74 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>table</title>
+<style>
+.yellow {
+	background: yellow;
+}
+</style>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+<script>
+$(function() {
+	$('table:first').clone().appendTo('body')
+	$('table:eq(1) tr').each(function() {
+		var $clear = false;
+		$(this)
+			.find(' > td')
+			.each(function($i) {
+				if (!$clear) {
+					$(this).siblings().each(function() {
+						if ($(this).html() == '&nbsp;') $(this).html('');
+					});
+					$clear = true;
+				}
+				var $index = $(this).nextUntil(':not(:empty)').last().index();
+				if (($(this).is(':empty')) && $index != -1) {
+					var $colspan = $index - $(this).index() + 1;
+					$(this).attr('colspan', $colspan);
+					$(this).parent().find('> td').slice($(this).index() + 1, $index + 1).remove();
+				}
+			});
+	});
+});
+</script>
+</head>
+
+<body>
+before
+<table width="100%" border="1" cellspacing="0" cellpadding="2">
+    <tr>
+        <td>text</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>text</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>a&nbsp;b</td>
+        <td>text</td>
+        <td>text</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>text</td>
+        <td>text</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+after
+</body>
+</html>
+
+

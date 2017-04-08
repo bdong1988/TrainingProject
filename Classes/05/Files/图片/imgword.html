@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>图片动态文字提示</title>
+<style type="text/css">
+#tips{border:1px solid #cccccc;background:blue;color:#fff;padding:5px;display:none;position:absolute;}
+</style>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("body").append("<div id='tips'>小破孩</div>");
+	$("img").mouseout(function(){
+   		$("#tips").fadeOut("fast");
+    }); 	
+	$("img").mousemove(function(e){
+   		$("#tips")
+   		 .css("top",(e.pageY - 5) + "px")
+   		 .css("left",(e.pageX + 5) + "px").fadeIn("slow");
+	}); 
+});
+</script>
+
+</head>
+<body>
+<img src="img/img7.gif" />
+
+</body>
+</html>

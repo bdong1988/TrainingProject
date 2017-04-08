@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片滚动</title>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+</head>
+<body>
+<div id="scrollarea" style="overflow: hidden; width: 500px;">
+        <table border="0" align="center">
+            <tr>
+                <td id="area1" valign="top" bgcolor="ffffff">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr align="center">
+                            <td>
+                                <a href="#" target="_blank">
+                                    <img src="img/bj_0.jpg" width="335" alt="第一张图" height="260"></a>
+                            </td>
+                            <td>
+                                <a href="#" target="_blank">
+                                    <img src="img/bj_1.jpg" width="335" alt="第二张图" height="260"></a>
+                            </td>
+                            <td>
+                                <a href="#" target="_blank">
+                                    <img src="img/bj_2.jpg" width="335" alt="第三张图" height="260"></a>
+                            </td>
+                            <td>
+                                <a href="#" target="_blank">
+                                    <img src="img/bj_3.jpg" width="335" alt="第四张图" height="260"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td id="area2" valign="top">
+                </td>
+            </tr>
+        </table>
+    </div> 
+
+    <script type="text/javascript"> 
+	var timer;
+    $("#area2").html($("#area1").html());
+    function imgMarquee(){ 
+        if($("#scrollarea").scrollLeft()>=$("#area1").width())
+            $("#scrollarea").scrollLeft(0); 
+        else{
+            $("#scrollarea").scrollLeft($("#scrollarea").scrollLeft()+5);
+        }
+    } 
+	$("#scrollarea").hover(function(){
+			clearInterval(timer);
+		},
+		function(){
+			timer=setInterval(imgMarquee,10);
+	});
+    </script>
+
+
+</body>
+</html>

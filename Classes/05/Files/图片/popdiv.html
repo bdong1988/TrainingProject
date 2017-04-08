@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>弹出图片</title>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+</head>
+<style>
+#imgarea{width:200px; height:100px; border: #333333 1px solid; position: relative; display:none; z-index:9999; background-color:#FFFFFF}
+.biaoti{height:25px; background-color:#666666; line-height:25px; position:absolute;float:right;right:0px;}
+#hh{position: absolute; top:0px; left:0px; background-color: #F9F9F2}
+</style>
+<body style="background-color:#0099CC; font-size:12px;">
+
+   <script>
+		$(function(){
+			$("#popup").click(function(){			
+				$("#imgarea").css("top",($(window).height()-$("#imgarea").height())/2+"px")
+				.css("left",($(window).width()-$("#imgarea").width())/2+"px").show();
+				$("#mask").css("width",$(window).width()+"px")
+				.css("height",$(window).height()+"px").css("opacity","0.5").show();
+			});			
+			$("#close").click(function(){
+				$("#imgarea").hide();
+				$("#mask").hide();
+			});		
+		});
+   </script>
+<a   id="popup" href="#1">弹出图片</a>
+<div id="imgarea">
+<div class="biaoti"><a href="#1"><img id="close" src="img/wrong.png" border="0" alt="close"/></a></div>
+<img src="img/bj_0.jpg" alt="aaa"/>
+</div>
+<div id="mask"></div>
+</body>
+</html>

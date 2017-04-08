@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jslib/jquery-1.6.js"></script>
+<script type="text/javascript">
+	function trowspan(tbl,col){
+   	 	var tdfst = "";
+		var compare="";
+    	var tdcur = "";
+    	var nums = 1;
+    	tdarr = $(tbl + " tr td:nth-child(" + col + ")");
+    	tdarr.each(function(i){
+        if(i==0){
+            tdfst = $(this);
+			compare=tdfst.text();
+        }else{
+            tdcur = $(this);
+            if(compare==tdcur.text()){
+                nums++;
+                tdcur.hide(); //remove();
+                tdfst.attr("rowSpan",nums);
+            }else{
+                tdfst = $(this);
+				compare=tdfst.text();
+				nums=1;
+            }
+        }
+    	}); 
+	}
+	
+	function tcolspan(tbl,row){
+    	var tdfst = "";
+		var compare="";
+    	var tdcur = "";
+    	var nums = 1;
+		$(tbl + " tr:eq(" + row + ")").children().each(function(i){
+            if(i==0){
+                tdfst = $(this);
+                compare =tdfst.text();
+            }else{
+                tdcur = $(this);
+                if(compare==tdcur.text()){
+                    nums++;
+                    tdcur.hide(); //remove();
+                    tdfst.attr("colSpan",nums);
+                }else{
+                    tdfst = $(this);
+                    compare=tdfst.text()
+					nums = 1;
+                }
+            }
+        	});
+    	
+	}
+	$(document).ready(function(){
+		tcolspan("#colstb",0);
+		//trowspan("#colstb",2);
+		
+	});
+</script>
+</head>
+<body>
+	<table border="1" id="colstb">
+    	<tr>
+        	<td>jQuery</td>
+            <td>jQuery</td>
+            <td>Javascript</td>
+            <td>XML</td>
+        </tr>
+        <tr>
+        	<td>jQuery</td>
+            <td>jQuery</td>
+            <td>Javascript</td>
+            <td>XML</td>
+        </tr>
+        <tr>
+        	<td>jQuery1</td>
+            <td>jQuery</td>
+            <td>Javascript</td>
+            <td>XML</td>
+        </tr>
+        <tr>
+        	<td>jQuery</td>
+            <td>jQuery</td>
+            <td>Javascript</td>
+            <td>XML</td>
+        </tr>
+    </table>
+</body>
+</html>
