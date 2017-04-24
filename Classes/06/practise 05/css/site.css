@@ -1,0 +1,19 @@
+.container {
+    /*background-color: yellow;*/
+}
+
+.container-fluid {
+    background-color: green
+}
+
+.d_left {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+.d_right {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>html1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/icons/iconfont.css">
+  <link rel="stylesheet" href="css/fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">人事管理系统</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Administrator <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <nav class="navbar navbar-inverse">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> 人员管理 <span class="caret"></span></a>
+              </li>
+            </li>
+            <li role="presentation">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span></span>入职管理</a>
+              </li>
+            </li>
+            <li role="presentation">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span></span>人员信息</a>
+              </li>
+            </li>
+            <li role="presentation">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span></span>试用期管理</a>
+              </li>
+            </li>
+            <li role="presentation">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span></span>离职管理</a>
+              </li>
+            </li>
+            <li role="presentation">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> 部门管理</a>
+              </li>
+            </li>
+            <li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> 岗位管理</a>
+              </li>
+            </li>
+            <li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> 报表管理 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-md-9">
+        <h2>人员信息</h2>
+
+        <ol class="breadcrumb">
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> 人员管理 </a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> 人员信息 </a></li>
+        </ol>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">查询条件</div>
+          <div class="panel-body">
+            <form>
+              <div class="row">
+                <div class="form-group col-md-3">
+                  <label for="exampleInputUname">姓名</label>
+                  <input type="text" class="form-control" id="exampleInputUname">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exampleInputNum">编号</label>
+                  <input type="text" class="form-control" id="exampleInputNum">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exampleInputFunc">部门</label>
+                  <select type="select" class="form-control" id="exampleInputFunc"></select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="exampleInputPos">岗位</label>
+                  <select type="select" class="form-control" id="exampleInputPos"></select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success pull-right">查询</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">查询结果</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12">
+
+                <button type="button" class="btn btn-success">新增</button>
+                <button type="button" class="btn btn-danger">删除</button>
+                <button type="button" class="btn btn-primary">修改</button>
+                <button type="button" class="btn btn-info pull-right">员工调用</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <form>
+                  <div class="form-group">
+                    <table class="table table-striped table-bordered">
+                      <th>
+                        <td>姓名</td>
+                        <td>编号</td>
+                        <td>部门</td>
+                        <td>岗位</td>
+                        <td>状态</td>
+                        <td>联系方式</td>
+                        <td>联系地址</td>
+                        <td>备注</td>
+                        <td>操作</td>
+                      </th>
+                      <tr>
+                        <td>赵一</td>
+                        <td>1001</td>
+                        <td>人事部</td>
+                        <td>文员</td>
+                        <td>在职</td>
+                        <td>188**88</td>
+                        <td>辽宁大连</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>赵一</td>
+                        <td>1001</td>
+                        <td>人事部</td>
+                        <td>文员</td>
+                        <td>在职</td>
+                        <td>188**88</td>
+                        <td>辽宁大连</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>赵一</td>
+                        <td>1001</td>
+                        <td>人事部</td>
+                        <td>文员</td>
+                        <td>在职</td>
+                        <td>188**88</td>
+                        <td>辽宁大连</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>赵一</td>
+                        <td>1001</td>
+                        <td>人事部</td>
+                        <td>文员</td>
+                        <td>在职</td>
+                        <td>188**88</td>
+                        <td>辽宁大连</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>赵一</td>
+                        <td>1001</td>
+                        <td>人事部</td>
+                        <td>文员</td>
+                        <td>在职</td>
+                        <td>188**88</td>
+                        <td>辽宁大连</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>赵一</td>
+                        <td>1001</td>
+                        <td>人事部</td>
+                        <td>文员</td>
+                        <td>在职</td>
+                        <td>188**88</td>
+                        <td>辽宁大连</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </table>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/jquery/jquery-2.1.3.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="js/site.js"></script>
+</body>
+
+</html>

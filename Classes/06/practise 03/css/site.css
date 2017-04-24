@@ -1,0 +1,23 @@
+.container
+{
+  background-color: yellow;
+}
+
+.container-fluid{
+  background-color: green
+}
+
+.mx1{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  padding: 20px;
+}
+
+.mx2{
+  width: 200px;
+  height: 200px;
+}
+.mx1 span{
+  display: block;
+}

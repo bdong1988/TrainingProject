@@ -1,0 +1,23 @@
+.container
+{
+  /*background-color: yellow;*/
+}
+
+.container-fluid{
+  background-color: green
+}
+
+
+.col-md-12 p{
+  height: 80px;
+  border-top:1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.col-md-12 p span{
+  display: block;
+  height: 30px;
+  background-color: yellow;
+  border-bottom: 1px solid black;
+}
