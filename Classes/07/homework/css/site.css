@@ -1,12 +1,55 @@
-.navEx {
-  background-color: yellow;
-}
 
 .background {
-  background: #7f0019;
+    background: #7f0019;
 }
 
 .userMoreInfo {
-  color: white;
-  font-size: 16px;
+    color: white;
+    font-size: 16px;
+}
+
+.header {
+    background: #7f0019;
+    color: white;
+    font-size: 20px;
+}
+
+.myfont {
+    color: white;
+    font-size: 20px;
+}
+
+.vipInfo {
+    position: relative;
+    background: #7f0019;
+    margin: 0px;
+    padding: 5px;
+    width: 100%;
+    height: 80px;
+}
+
+.userPic {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 5px;
+    left: 5px;
+}
+
+.levelInfo {
+    position: absolute;
+    width: 100px;
+    top: 5px;
+    left: 80px;
+}
+
+.goldVIP {
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    right: 5px;
+}
+
+.picbackground{
+  background: white;
 }
