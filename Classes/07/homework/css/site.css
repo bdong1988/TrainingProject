@@ -86,9 +86,8 @@
     font-size: 20px;
 }
 
-.largeIcon {
-    color: #7f0019;
-    font-size: 40x;
+.badge{
+  background: red;
 }
 
 .picbackground {
@@ -121,8 +120,11 @@
 
 
 .progress {
-    height: 10px;
-    color: #7f0019;
+    height: 15px;
+}
+
+.progress-bar{
+  font-size: 10px;
 }
 
 .detailInfo {
@@ -160,4 +162,27 @@
 .shopList li {
     margin: 5px 0px;
     padding: 0px;
+}
+
+.notificationList{
+  margin: 10px 0px;
+}
+
+.notificationList a{
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius:0px !important;
+}
+
+.notificationContainer{
+  padding: 0px;
+}
+
+.notifyImg{
+  width: 100%;
+}
+
+.notifyMessage{
+  padding-left: 0px;
+  padding-top: 10px;
 }
