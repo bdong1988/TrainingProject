@@ -1,4 +1,3 @@
-
 .background {
     background: #7f0019;
 }
@@ -38,9 +37,33 @@
 
 .levelInfo {
     position: absolute;
-    width: 100px;
     top: 5px;
     left: 80px;
+}
+
+.pointInfo {
+    background: #f8f8f8;
+    height: 60px;
+}
+
+.pointInfo div {
+    padding-top: 10px;
+}
+
+.pointInfo div a {
+    color: #7f0019;
+}
+
+.righPosition {
+    position: absolute;
+    top: 5x;
+    right: 5px;
+    padding: 0px;
+}
+
+.qrCode {
+    font-size: 60px;
+    color: white;
 }
 
 .goldVIP {
@@ -50,6 +73,91 @@
     right: 5px;
 }
 
-.picbackground{
-  background: white;
+.indexTable tr {
+    height: 33.3333vw;
+}
+
+.indexTable tr td {
+    padding-top: 20px;
+}
+
+.indexTable tr td a {
+    color: #7f0019;
+    font-size: 20px;
+}
+
+.largeIcon {
+    color: #7f0019;
+    font-size: 40x;
+}
+
+.picbackground {
+    background: white;
+}
+
+.cardContainer {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.discount {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+}
+
+.card {
+    width: 100%;
+}
+
+.duration {
+  position: absolute;
+  border-top: 1px dotted white;
+  width: 100%;
+  height: 40%;
+  bottom: 0px;
+}
+
+
+.progress {
+    height: 10px;
+    color: #7f0019;
+}
+
+.detailInfo {
+    background: #f8f8f8;
+    width: 100%;
+    padding: 0px;
+}
+
+.detailList li {
+    height: 40px;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 5px;
+}
+
+.detailList li span {
+    font-size: 20px;
+}
+
+.vipRule {
+    background: #7f0019;
+    color: white;
+    font-size: 20px;
+}
+
+.pointList li {
+    height: 60px;
+    background: #f8f8f8;
+    margin: 5px 0px;
+}
+
+.areaList {
+    margin: 10px;
+}
+
+.shopList li {
+    margin: 5px 0px;
+    padding: 0px;
 }
