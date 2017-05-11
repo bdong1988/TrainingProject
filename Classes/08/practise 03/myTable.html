@@ -10,8 +10,8 @@
 </head>
 
 <body ng-app="app">
-  <div ng-controller="ctrl">
-    <my-table></my-table>
+  <div ng-controller="tableCtrl">
+    <my-table my-content="[{name:'A', age:'1'},{name:'B', age:'2'},{name:'C', age:'3'},{name:'D', age:'4'},{name:'E', age:'5'}]"></my-table>
   </div> 
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/site.js"></script>
